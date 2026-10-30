@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#163f32" />
+    <meta
+      name="description"
+      content="Жергілікті кәсіптерді, маусымдық өнімдер мен бағаларды бір картадан табыңыз. HarvestMap AI."
+    />
+    <title>HarvestMap AI — Жергілікті өнім. Жаңа мүмкіндік.</title>
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/static/vendor/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/app.css" />
+    <script src="/static/vendor/leaflet.js" defer></script>
+    <script src="/static/vendor/chart.umd.js" defer></script>
+    <script src="/static/js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Негізгі мазмұнға өту</a>
+    <div class="demo-strip">
+      <span class="live-dot"></span> ДЕМО ПЛАТФОРМА
+      <span class="strip-detail"
+        >· Үлгілік деректер нақты нарық статистикасы емес</span
+      >
+    </div>
+    <header class="header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#/" aria-label="HarvestMap AI басты беті"
+          ><span class="brand-mark">↗</span
+          ><span
+            >HarvestMap<span class="ai-label">AI</span
+            ><small>ЖЕРГІЛІКТІ МҮМКІНДІКТЕР КАРТАСЫ</small></span
+          ></a
+        ><button
+          class="icon-btn mobile-toggle"
+          aria-label="Мәзірді ашу"
+          aria-expanded="false"
+          data-action="menu"
+        >
+          ☰
+        </button>
+        <nav id="navigation" aria-label="Негізгі мәзір">
+          <a href="#/map">Карта</a><a href="#/businesses">Кәсіптер</a
+          ><a href="#/products">Өнімдер</a><a href="#/dashboard">Талдау</a
+          ><a href="#/assistant" class="nav-ai">✧ AI көмекші</a>
+        </nav>
+        <div id="auth-nav"></div>
+      </div>
+    </header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="footer">
+      <div class="container footer-top">
+        <a class="brand light" href="#/"
+          ><span class="brand-mark">↗</span
+          ><span>HarvestMap<span class="ai-label">AI</span></span></a
+        >
+        <p>
+          Жергілікті өнім. Жаңа мүмкіндік.<br /><small
+            >Өз өңіріңізді жаңаша таныңыз.</small
+          >
+        </p>
+        <a href="#/map">Картадан іздеу ↗</a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> HarvestMap AI · Демо жоба</span
+        ><span
+          >Карта деректері:
+          <a
+            href="https://www.openstreetmap.org/copyright"
+            target="_blank"
+            rel="noopener"
+            >© OpenStreetMap қатысушылары</a
+          ></span
+        >
+      </div>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal" aria-labelledby="modal-title">
+      <div class="modal-top">
+        <h2 id="modal-title"></h2>
+        <button
+          class="icon-btn"
+          data-action="close-modal"
+          aria-label="Терезені жабу"
+        >
+          ×
+        </button>
+      </div>
+      <div id="modal-content"></div>
+    </dialog>
+  </body>
+</html>
